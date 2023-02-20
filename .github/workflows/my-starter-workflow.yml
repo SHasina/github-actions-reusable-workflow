@@ -10,10 +10,10 @@ jobs:
       -name: Run a multi line script
 	 run: |
 	   echo Add other actions to build
-	   echo test & deploy
+
   call-workflow-in-local-repo:
     startegy:
       matrix:
         nodeversion [3,4,5,6]
-	  uses: ./.github-workflow/reusable-workflow-1.yml
+	  uses: ./.github/workflow/reusable-workflow-1.yml
         node: {{matrix.nodeversion}}
